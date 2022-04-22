@@ -1,0 +1,98 @@
+/* 设置盒子 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+    height: 800px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* 计分板 */
+.score {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 25px;
+    z-index: 5;
+}
+
+/* 游戏主体 */
+.game {
+    position: absolute;
+    top: -800px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    
+}
+/* 行 */
+.row {
+    height: 200px;
+    width: 100%;
+}
+.black {
+    background-color: #000;
+}
+/* 列 */
+.cell {
+    float: left;
+    height: 100%;
+    width: 99px;
+    border: 1px solid #000;
+}
+
+/* 开始游戏界面 */
+.start {
+    /* display: none; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 200px;
+    border: 4px solid yellowgreen;
+}
+.start button {
+    width: 100px;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+}
+/* 点击之后的颜色 */
+.gray {
+    float: left;
+    height: 100%;
+    width: 99px;
+    border: 1px solid #000;
+    background-color: #ccc;
+}
+.result {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 50%;
+    background-color: pink;
+    transform: translateY(-50%);
+    line-height: 100px;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;    
+    font-size: 25px;
+    z-index: 5;
+}
+.result #s{
+    color: orange;
+}
